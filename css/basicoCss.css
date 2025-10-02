@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+table {
+    margin-bottom: 24px;
+    border-collapse: collapse;
+    width: 90vw;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 8px;
+}
+
+td {
+    border: 1px solid #b0bec5;
+    text-align: center;
+    padding: 12px;
+    width: 20%;
+    background: #f5f7fa;
+}
+
+img {
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: 0 auto 8px auto;
+    border-radius: 4px;
+}
+
+#output {
+    margin-top: 16px;
+    border: 1px solid #b0bec5;
+    padding: 12px;
+    min-height: 40px;
+    width: 80vw;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 6px;
+}
