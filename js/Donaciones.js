@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     img.addEventListener("click", () => {
       let nombre = img.alt;
       let precio = parseFloat(img.getAttribute("data-precio")) || 0;
-
       let output = document.getElementById("output");
       if (output) output.innerHTML = "";
 
