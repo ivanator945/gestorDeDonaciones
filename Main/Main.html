@@ -10,64 +10,70 @@
 </head>
 
 <body>
-    <h1>GestorDeDonaciones</h1>
-    <table>
-        <tr>
-            <td>
-                <img src="../img/Cruz Roja.png" alt="Cruz Roja" data-precio="10">
-                <div>Cruz Roja Dona 10€</div>
-            </td>
-            <td>
-                <img src="../img/Médicos Sin Fronteras.png" alt="Médicos Sin Fronteras" data-precio="10">
-                <div>Médicos Sin Fronteras Dona 10€ </div>
-            </td>
-            <td>
-                <img src="../img/UNICEF.png" alt="UNICEF" data-precio="5">
-                <div>UNICEF Dona 5€</div>
-            </td>
-            <td>
-                <img src="../img/Save the Children.png" alt="Save the Children" data-precio="5">
-                <div>Save the Children Dona 5€ </div>
-            </td>
-            <td>
-                <img src="../img/ACNUR.png" alt="ACNUR Dona" data-precio="10">
-                <div>ACNUR Dona 10€</div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="../img/Amnistía Internacional.jpg" alt="Amnistía Internacional" data-precio="10">
-                <div>Amnistía Internacional Dona 10€</div>
-            </td>
-            <td>
-                <img src="../img/Cáritas.png" alt="Cáritas" data-precio="7">
-                <div>Cáritas Dona 7€</div>
-            </td>
-            <td>
-                <img src="../img/WWF.jpg" alt="WWF " data-precio="5">
-                <div>WWF Dona 5€</div>
-            </td>
-            <td>
-                <img src="../img/Fundación Vicente Ferrer.png" alt="Fundación Vicente Ferrer" data-precio="10">
-                <div>Fundación Vicente Ferrer Dona 10€</div>
-            </td>
-            <td>
-                <img src="../img/Oxfam Intermón.jpg" alt="Oxfam Intermón" data-precio="5">
-                <div>Oxfam Intermón Dona 5€</div>
-            </td>
-        </tr>
-    </table>
+    <div id="contenedorGeneral">
+        <div id="zonaPrincipal">
+            <h1>GestorDeDonaciones</h1>
+            <table>
+                <tr>
+                    <td>
+                        <img src="../img/Cruz Roja.png" alt="Cruz Roja" data-precio="10">
+                        <div>Cruz Roja Dona 10€</div>
+                    </td>
+                    <td>
+                        <img src="../img/Médicos Sin Fronteras.png" alt="Médicos Sin Fronteras" data-precio="10">
+                        <div>Médicos Sin Fronteras Dona 10€ </div>
+                    </td>
+                    <td>
+                        <img src="../img/UNICEF.png" alt="UNICEF" data-precio="5">
+                        <div>UNICEF Dona 5€</div>
+                    </td>
+                    <td>
+                        <img src="../img/Save the Children.png" alt="Save the Children" data-precio="5">
+                        <div>Save the Children Dona 5€ </div>
+                    </td>
+                    <td>
+                        <img src="../img/ACNUR.png" alt="ACNUR Dona" data-precio="10">
+                        <div> Dona 10€</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="../img/Amnistía Internacional.jpg" alt="Amnistía Internacional" data-precio="10">
+                        <div>Amnistía Internacional Dona 10€</div>
+                    </td>
+                    <td>
+                        <img src="../img/Cáritas.png" alt="Cáritas" data-precio="7">
+                        <div>Cáritas Dona 7€</div>
+                    </td>
+                    <td>
+                        <img src="../img/WWF.jpg" alt="WWF " data-precio="5">
+                        <div>WWF Dona 5€</div>
+                    </td>
+                    <td>
+                        <img src="../img/Fundación Vicente Ferrer.png" alt="Fundación Vicente Ferrer" data-precio="10">
+                        <div>Fundación Vicente Ferrer Dona 10€</div>
+                    </td>
+                    <td>
+                        <img src="../img/Oxfam Intermón.jpg" alt="Oxfam Intermón" data-precio="5">
+                        <div>Oxfam Intermón Dona 5€</div>
+                    </td>
+                </tr>
+            </table>
 
-    <button onclick="mostrarTexto()">Mostrar texto</button>
-    <br>
+            <button onclick="mostrarTexto()">Mostrar texto</button>
+            <div id="output"></div>
 
-    <div id="output"></div>
+            <script type="module" src="../js/Donaciones.js"></script>
+            <script type="module" src="../js/MostrarResumen.js"></script>
+            <script type="module" src="../js/ContadorDonaciones.js"></script>
+            <script type="module" src="../js/Boton.js"></script>
+        </div>
 
-    <script type="module" src="../js/Donaciones.js"></script>
-    <script type="module" src="../js/MostrarResumen.js"></script>
-    <script type="module" src="../js/ContadorDonaciones.js"></script>
-    <script type="module" src="../js/Boton.js"></script>
-
+        <div id="zonaDerecha">
+            <h2>Resumen de Donaciones</h2>
+        </div>
+    </div>
 </body>
+
 
 </html>

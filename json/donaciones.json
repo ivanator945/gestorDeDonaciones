@@ -1,0 +1,228 @@
+{
+    "organizaciones": [
+        {
+            "id": 1,
+            "nombre": "Cruz Roja",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 2,
+            "nombre": "medicos sin fronteras",
+            "multiraza": true,
+            "ambito": "internacional"
+        },
+        {
+            "id": 3,
+            "nombre": "UNICEF",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 4,
+            "nombre": "save the children",
+            "multiraza": false,
+            "ambito": "internacional"
+        },
+        {
+            "id": 5,
+            "nombre": "ACNUR",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 6,
+            "nombre": "Amnistia Internacional",
+            "multiraza": true,
+            "ambito": "internacional"
+        },
+        {
+            "id": 7,
+            "nombre": "Caritas",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 8,
+            "nombre": "WWF",
+            "multiraza": true,
+            "ambito": "internacional"
+        },
+        {
+            "id": 9,
+            "nombre": "Fundacion vicente ferrer",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 10,
+            "nombre": "Oxfam Intermon",
+            "multiraza": true,
+            "ambito": "internacional"
+        }
+
+
+    ],
+    "tramiteDonacion": [
+        {
+            "id": 1,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        }
+    ]
+}
