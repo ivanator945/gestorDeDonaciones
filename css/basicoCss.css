@@ -1,16 +1,15 @@
 button {
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.08em;
-  cursor: pointer;
-  transition: transform 0.15s ease; 
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.08em;
+    cursor: pointer;
+    transition: transform 0.15s ease;
 }
 
 button:hover {
-  transform: scale(0.95); 
+    transform: scale(0.95);
 }
-
 
 body {
     background: #dbeafe;
@@ -18,13 +17,14 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 table {
     margin-bottom: 32px;
     width: 90vw;
     max-width: 800px;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
     overflow: hidden;
 }
@@ -45,7 +45,18 @@ img {
     display: block;
     margin: 0 auto 12px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    cursor: pointer;
+}
+
+.donacionInput {
+    width: 70%;
+    padding: 6px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    font-size: 0.95em;
 }
 
 #output {
@@ -54,7 +65,65 @@ img {
     padding: 16px;
     width: 80vw;
     max-width: 900px;
-    background: rgba(255,255,255,0.97);
+    background: rgba(255, 255, 255, 0.97);
     border-radius: 10px;
     color: #2d3e50;
+    box-sizing: border-box;
+}
+
+#contenedorGeneral {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#zonaPrincipal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#zonaDerecha {
+    width: 25%;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 100%);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#zonaDerecha h2 {
+    margin-top: 0;
+    color: #1f2937;
+}
+
+#zonaDerecha div {
+    width: 90%;
+    padding: 6px 8px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+    #contenedorGeneral {
+        flex-direction: column;
+    }
+
+    #zonaDerecha {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+    }
 }

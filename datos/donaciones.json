@@ -1,0 +1,91 @@
+{
+    "organizaciones": [
+        {
+            "id": 1,
+            "nombre": "Cruz Roja",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 2,
+            "nombre": "Médicos Sin Fronteras",
+            "multiraza": true,
+            "ambito": "internacional"
+        },
+        {
+            "id": 3,
+            "nombre": "UNICEF",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 4,
+            "nombre": "Save the Children",
+            "acogida": true,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 5,
+            "nombre": "ACNUR",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 6,
+            "nombre": "Amnistía Internacional",
+            "multiraza": true,
+            "ambito": "internacional"
+        },
+        {
+            "id": 7,
+            "nombre": "Cáritas",
+            "acogida": true,
+            "rangoEdad": "tercera edad"
+        },
+        {
+            "id": 8,
+            "nombre": "WWF",
+            "multiraza": true,
+            "ambito": "internacional"
+        },
+        {
+            "id": 9,
+            "nombre": "Fundación Vicente Ferrer",
+            "acogida": false,
+            "rangoEdad": "infancia"
+        },
+        {
+            "id": 10,
+            "nombre": "Oxfam Intermón",
+            "multiraza": true,
+            "ambito": "internacional"
+        }
+    ],
+    "tramiteDonacion": [
+        {
+            "id": 1,
+            "fecha": "11/2025",
+            "donaciones": [
+                {
+                    "idOrganizacion": 1,
+                    "importeTotal": 45.78,
+                    "numDonaciones": 5,
+                    "cantidad": 10,
+                    "fecha": "2025-10-28",
+                    "hora": "11:32:15"
+                },
+                {
+                    "idOrganizacion": 2,
+                    "cantidad": 10,
+                    "fecha": "2025-10-28",
+                    "hora": "11:32:15"
+                },
+                {
+                    "idOrganizacion": 2,
+                    "importeTotal": 37.23,
+                    "numDonaciones": 2
+                }
+            ]
+        }
+    ]
+}
