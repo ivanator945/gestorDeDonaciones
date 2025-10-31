@@ -59,7 +59,7 @@ img {
     font-size: 0.95em;
 }
 
-#output {
+#outputTexto {
     margin-top: 24px;
     border: none;
     padding: 16px;
@@ -69,6 +69,7 @@ img {
     border-radius: 10px;
     color: #2d3e50;
     box-sizing: border-box;
+    white-space: pre-line;
 }
 
 #contenedorGeneral {
@@ -126,4 +127,21 @@ img {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         box-shadow: none;
     }
+}
+
+
+#botones {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#btnMostrar {
+    background-color: #3b82f6;
+    color: white;
+}
+
+#btnFinalizar {
+    background-color: #10b981;
+    color: white;
 }

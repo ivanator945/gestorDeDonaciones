@@ -15,81 +15,99 @@
                 <tr>
                     <td>
                         <img src="../img/Cruz Roja.png" alt="Cruz Roja">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Cruz Roja">
-                        </div>
+
                         <div>Cruz Roja</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Cruz Roja">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/Médicos Sin Fronteras.png" alt="Médicos Sin Fronteras">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Médicos Sin Fronteras">
-                        </div>
                         <div>Médicos Sin Fronteras</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Médicos Sin Fronteras">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/UNICEF.png" alt="UNICEF">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="UNICEF">
-                        </div>
                         <div>UNICEF</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="UNICEF">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/Save the Children.png" alt="Save the Children">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Save the Children">
-                        </div>
                         <div>Save the Children</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Save the Children">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/ACNUR.png" alt="ACNUR">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="ACNUR">
-                        </div>
                         <div>ACNUR</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="ACNUR">
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="../img/Amnistía Internacional.jpg" alt="Amnistía Internacional">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Amnistía Internacional">
-                        </div>
                         <div>Amnistía Internacional</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Amnistía Internacional">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/Cáritas.png" alt="Cáritas">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Cáritas">
-                        </div>
                         <div>Cáritas</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Cáritas">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/WWF.jpg" alt="WWF">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="WWF">
-                        </div>
                         <div>WWF</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="WWF">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/Fundación Vicente Ferrer.png" alt="Fundación Vicente Ferrer">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Fundación Vicente Ferrer">
-                        </div>
                         <div>Fundación Vicente Ferrer</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Fundación Vicente Ferrer">
+                        </div>
                     </td>
                     <td>
                         <img src="../img/Oxfam Intermón.jpg" alt="Oxfam Intermón">
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Oxfam Intermón">
-                        </div>
                         <div>Oxfam Intermón</div>
+                        <div>
+                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput"
+                                data-org="Oxfam Intermón">
+                        </div>
                     </td>
                 </tr>
             </table>
 
-            <button onclick="mostrarTexto()">Mostrar texto</button>
-            <div id="output"></div>
+            <div id="finalizarSeccion">
+                <h2>Resumen final de donaciones</h2>
+            </div>
+            <button id="btnMostrar">Mostrar resumen</button>
+            <br>
+            <button id="btnEnviar">Enviar donaciones</button>
+
+            <div id="outputTexto">
+            </div>
 
             <script type="module" src="../js/Donaciones.js"></script>
             <script type="module" src="../js/MostrarResumen.js"></script>
@@ -99,7 +117,9 @@
 
         <div id="zonaDerecha">
             <h2>Resumen de Donaciones</h2>
+            
         </div>
     </div>
 </body>
+
 </html>
