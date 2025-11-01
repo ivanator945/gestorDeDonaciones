@@ -34,5 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
             window.actualizarResumen();
         });
     }
-
+var btnMostrar = document.getElementById("btnMostrar");
+    if (btnMostrar) {
+        btnMostrar.addEventListener("click", function () {
+            window.mostrarTexto();
+            window.actualizarResumen();
+        });
+    }
 });
