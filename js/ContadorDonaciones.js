@@ -20,3 +20,33 @@ window.contarDonaciones = function () {
 
     return { conteo: conteo, totalDonado: totalDonado };
 };
+
+window.actualizarResumen = function () {
+    var resultado = window.contarDonaciones();
+    var conteo = resultado.conteo;
+    var totalDonado = resultado.totalDonado;
+
+    var zonaDerecha = document.getElementById("zonaDerecha");
+
+    var html = "<h2>Resumen de Donaciones</h2>";
+
+    var hayDonaciones = false;
+    for (var nombre in conteo) {
+        hayDonaciones = true;
+        break;
+    }
+
+    if (!hayDonaciones) {
+        html += "<p>No hay donaciones registradas.</p>";
+    } else {
+        html += "<ul>";
+        for (var nombre in conteo) {
+            var color = (nombre === window.ultimaDonacion) ? "green" : "black";
+            html += "<li style='color:" + color + "'><strong>" + nombre + "</strong>: " +
+                conteo[nombre].veces + " veces, total " + conteo[nombre].total.toFixed(2) + " €</li>";
+        }
+        html += "</ul>";
+    }
+
+    zonaDerecha.innerHTML = html;
+};
