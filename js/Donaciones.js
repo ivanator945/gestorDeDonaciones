@@ -41,4 +41,24 @@ var btnMostrar = document.getElementById("btnMostrar");
             window.actualizarResumen();
         });
     }
+
+
 });
+
+window.enviarDonacionesAlServidor = function () {
+    var donaciones = [];
+
+    for (var i = 0; i < window.listaAportaciones.length; i++) {
+        var ap = window.listaAportaciones[i];
+        donaciones.push({
+            id: ap.id,
+            organizacion: ap.organizacion,
+            importeTotal: parseFloat(ap.cantidad.toFixed(2)),
+            numDonaciones: ap.numDonaciones,
+            cantidad: parseFloat((ap.cantidad / ap.numDonaciones).toFixed(2)),
+            fecha: new Date().toISOString().split("T")[0],
+            hora: new Date().toLocaleTimeString("es-ES", { hour12: false })
+        });
+    }
+
+};
