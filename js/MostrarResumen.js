@@ -77,7 +77,6 @@ window.mostrarTexto = function () {
         alert(mensajePopup);
     }
 
-
     setTimeout(() => {
         if (outputTexto) outputTexto.innerText = "";
         if (output) output.innerHTML = "";

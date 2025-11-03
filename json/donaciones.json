@@ -62,54 +62,5 @@
     }
   ],
   "tramiteDonacion": [
-    {
-      "id": "fe69",
-      "tramiteDonacion": [
-        {
-          "id": 1762205612577,
-          "fecha": "2025-11-03",
-          "donaciones": [
-            {
-              "id": 3,
-              "organizacion": "UNICEF",
-              "importeTotal": 22,
-              "numDonaciones": 1,
-              "cantidad": 22,
-              "fecha": "2025-11-03",
-              "hora": "22:33:44"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "44cc",
-      "tramiteDonacion": [
-        {
-          "id": 1762205612577,
-          "fecha": "2025-11-03",
-          "donaciones": [
-            {
-              "id": 3,
-              "organizacion": "UNICEF",
-              "importeTotal": 22,
-              "numDonaciones": 1,
-              "cantidad": 22,
-              "fecha": "2025-11-03",
-              "hora": "22:33:47"
-            },
-            {
-              "id": 4,
-              "organizacion": "Save the Children",
-              "importeTotal": 22,
-              "numDonaciones": 1,
-              "cantidad": 22,
-              "fecha": "2025-11-03",
-              "hora": "22:33:47"
-            }
-          ]
-        }
-      ]
-    }
   ]
 }
