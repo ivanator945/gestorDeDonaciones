@@ -31,7 +31,8 @@ let data = [
     { id: 6, 
         nombre: "amnesty international", 
         acogida: false, 
-        internacional: "internacional" },
+        internacional: "internacional" 
+    },
     { id: 7, 
         nombre: "Cáritas", 
         acogida: true, 

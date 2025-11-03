@@ -54,6 +54,41 @@ window.mostrarTexto = function () {
     if (outputTexto) outputTexto.innerText = textoPlano;
     if (output) output.innerHTML = textoHTML;
 
+    var mensajePopup = "";
+    window.listaAportaciones.forEach(function (ap, index) {
+        var orgInfo = data.find(d => d.nombre.toLowerCase() === ap.organizacion.toLowerCase());
+        if (orgInfo) {
+            var linea = (index + 1) + ". " + orgInfo.nombre + " ";
+            if (orgInfo.rangoEdad) {
+                linea += "trabaja con personas, está enfocada en la " + orgInfo.rangoEdad;
+                if (orgInfo.acogida) {
+                    linea += " y tramita acogidas.";
+                } else {
+                    linea += " y no tramita acogidas.";
+                }
+            } else if (orgInfo.ambito || orgInfo.internacional) {
+                linea += "trabaja con todo tipo de animales a nivel " + (orgInfo.ambito || orgInfo.internacional) + ".";
+            }
+            mensajePopup += linea + "\n";
+        }
+    });
+
+    if (mensajePopup !== "") {
+        alert(mensajePopup);
+    }
+
+
+    setTimeout(() => {
+        if (outputTexto) outputTexto.innerText = "";
+        if (output) output.innerHTML = "";
+
+        var zonaDerecha = document.getElementById("zonaDerecha");
+        if (zonaDerecha) zonaDerecha.innerHTML = "<h2>Resumen de Donaciones</h2>";
+
+        window.listaAportaciones = [];
+
+        if (modal) modal.remove();
+    }, 10000);
     return resumenDonaciones;
 };
 
