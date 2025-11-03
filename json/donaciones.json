@@ -1,91 +1,590 @@
 {
-    "organizaciones": [
+  "organizaciones": [
+    {
+      "id": "1",
+      "nombre": "Cruz Roja",
+      "acogida": false,
+      "rangoEdad": "infancia"
+    },
+    {
+      "id": "2",
+      "nombre": "Médicos Sin Fronteras",
+      "multiraza": true,
+      "ambito": "internacional"
+    },
+    {
+      "id": "3",
+      "nombre": "UNICEF",
+      "acogida": false,
+      "rangoEdad": "infancia"
+    },
+    {
+      "id": "4",
+      "nombre": "Save the Children",
+      "acogida": true,
+      "rangoEdad": "infancia"
+    },
+    {
+      "id": "5",
+      "nombre": "ACNUR",
+      "acogida": false,
+      "rangoEdad": "infancia"
+    },
+    {
+      "id": "6",
+      "nombre": "Amnistía Internacional",
+      "multiraza": true,
+      "ambito": "internacional"
+    },
+    {
+      "id": "7",
+      "nombre": "Cáritas",
+      "acogida": true,
+      "rangoEdad": "tercera edad"
+    },
+    {
+      "id": "8",
+      "nombre": "WWF",
+      "multiraza": true,
+      "ambito": "internacional"
+    },
+    {
+      "id": "9",
+      "nombre": "Fundación Vicente Ferrer",
+      "acogida": false,
+      "rangoEdad": "infancia"
+    },
+    {
+      "id": "10",
+      "nombre": "Oxfam Intermón",
+      "multiraza": true,
+      "ambito": "internacional"
+    }
+  ],
+  "tramiteDonacion": [
+    {
+      "id": "1",
+      "fecha": "11/2025",
+      "donaciones": [
         {
-            "id": 1,
-            "nombre": "Cruz Roja",
-            "acogida": false,
-            "rangoEdad": "infancia"
+          "idOrganizacion": 1,
+          "importeTotal": 45.78,
+          "numDonaciones": 5,
+          "cantidad": 10,
+          "fecha": "2025-10-28",
+          "hora": "11:32:15"
         },
         {
-            "id": 2,
-            "nombre": "Médicos Sin Fronteras",
-            "multiraza": true,
-            "ambito": "internacional"
+          "idOrganizacion": 2,
+          "cantidad": 10,
+          "fecha": "2025-10-28",
+          "hora": "11:32:15"
         },
         {
-            "id": 3,
-            "nombre": "UNICEF",
-            "acogida": false,
-            "rangoEdad": "infancia"
-        },
-        {
-            "id": 4,
-            "nombre": "Save the Children",
-            "acogida": true,
-            "rangoEdad": "infancia"
-        },
-        {
-            "id": 5,
-            "nombre": "ACNUR",
-            "acogida": false,
-            "rangoEdad": "infancia"
-        },
-        {
-            "id": 6,
-            "nombre": "Amnistía Internacional",
-            "multiraza": true,
-            "ambito": "internacional"
-        },
-        {
-            "id": 7,
-            "nombre": "Cáritas",
-            "acogida": true,
-            "rangoEdad": "tercera edad"
-        },
-        {
-            "id": 8,
-            "nombre": "WWF",
-            "multiraza": true,
-            "ambito": "internacional"
-        },
-        {
-            "id": 9,
-            "nombre": "Fundación Vicente Ferrer",
-            "acogida": false,
-            "rangoEdad": "infancia"
-        },
-        {
-            "id": 10,
-            "nombre": "Oxfam Intermón",
-            "multiraza": true,
-            "ambito": "internacional"
+          "idOrganizacion": 2,
+          "importeTotal": 37.23,
+          "numDonaciones": 2
         }
-    ],
-    "tramiteDonacion": [
+      ]
+    },
+    {
+      "id": "3ede",
+      "tramiteDonacion": [
         {
-            "id": 1,
-            "fecha": "11/2025",
-            "donaciones": [
-                {
-                    "idOrganizacion": 1,
-                    "importeTotal": 45.78,
-                    "numDonaciones": 5,
-                    "cantidad": 10,
-                    "fecha": "2025-10-28",
-                    "hora": "11:32:15"
-                },
-                {
-                    "idOrganizacion": 2,
-                    "cantidad": 10,
-                    "fecha": "2025-10-28",
-                    "hora": "11:32:15"
-                },
-                {
-                    "idOrganizacion": 2,
-                    "importeTotal": 37.23,
-                    "numDonaciones": 2
-                }
-            ]
+          "id": 1762194153428,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:22:33"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "id": "c9b3",
+      "tramiteDonacion": [
+        {
+          "id": 1762194161606,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:22:41"
+            },
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:22:41"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a60c",
+      "tramiteDonacion": [
+        {
+          "id": 1762194441523,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:27:21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4e2a",
+      "tramiteDonacion": [
+        {
+          "id": 1762194442733,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:27:22"
+            },
+            {
+              "id": 4,
+              "organizacion": "Save the Children",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:27:22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0452",
+      "tramiteDonacion": [
+        {
+          "id": 1762194935354,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:35:35"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5dfe",
+      "tramiteDonacion": [
+        {
+          "id": 1762194936689,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:35:36"
+            },
+            {
+              "id": 4,
+              "organizacion": "Save the Children",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:35:36"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "be66",
+      "tramiteDonacion": [
+        {
+          "id": 1762194937849,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:35:37"
+            },
+            {
+              "id": 4,
+              "organizacion": "Save the Children",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:35:37"
+            },
+            {
+              "id": 5,
+              "organizacion": "ACNUR",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:35:37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4815",
+      "tramiteDonacion": [
+        {
+          "id": 1762195016018,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:36:56"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e9a3",
+      "tramiteDonacion": [
+        {
+          "id": 1762195030813,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 9,
+              "organizacion": "Fundación Vicente Ferrer",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:37:10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "61ee",
+      "tramiteDonacion": [
+        {
+          "id": 1762195033568,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 9,
+              "organizacion": "Fundación Vicente Ferrer",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:37:13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2bbc",
+      "tramiteDonacion": [
+        {
+          "id": 1762195059742,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:37:39"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d546",
+      "tramiteDonacion": [
+        {
+          "id": 1762195087715,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:38:07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f240",
+      "tramiteDonacion": [
+        {
+          "id": 1762195093890,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 44,
+              "numDonaciones": 2,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:38:13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01c",
+      "tramiteDonacion": [
+        {
+          "id": 1762195099295,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:38:19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f8f1",
+      "tramiteDonacion": [
+        {
+          "id": 1762195228059,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 44,
+              "numDonaciones": 2,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:40:28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ff3b",
+      "tramiteDonacion": [
+        {
+          "id": 1762195255629,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 3,
+              "organizacion": "UNICEF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:40:55"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f83a",
+      "tramiteDonacion": [
+        {
+          "id": 1762195791592,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:49:51"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4869",
+      "tramiteDonacion": [
+        {
+          "id": 1762195796840,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:49:56"
+            },
+            {
+              "id": 9,
+              "organizacion": "Fundación Vicente Ferrer",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:49:56"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "190e",
+      "tramiteDonacion": [
+        {
+          "id": 1762195798250,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:49:58"
+            },
+            {
+              "id": 9,
+              "organizacion": "Fundación Vicente Ferrer",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:49:58"
+            },
+            {
+              "id": 10,
+              "organizacion": "Oxfam Intermón",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:49:58"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6564",
+      "tramiteDonacion": [
+        {
+          "id": 1762195805997,
+          "fecha": "2025-11-03",
+          "donaciones": [
+            {
+              "id": 8,
+              "organizacion": "WWF",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:50:05"
+            },
+            {
+              "id": 9,
+              "organizacion": "Fundación Vicente Ferrer",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:50:05"
+            },
+            {
+              "id": 10,
+              "organizacion": "Oxfam Intermón",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:50:05"
+            },
+            {
+              "id": 7,
+              "organizacion": "Cáritas",
+              "importeTotal": 22,
+              "numDonaciones": 1,
+              "cantidad": 22,
+              "fecha": "2025-11-03",
+              "hora": "19:50:05"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

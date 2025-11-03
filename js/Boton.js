@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (boton) {
         boton.addEventListener("click", () => {
             window.mostrarResumen();
-            window.mostrarPeculiaridades();
             guardarJSON();
             window.mostrarTexto();
         });
