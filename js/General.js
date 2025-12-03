@@ -97,3 +97,24 @@ function activarEventosDonacion() {
         });
     });
 }
+window.actualizarResumen = function() {
+    const zona = document.getElementById("zonaDerecha");
+    zona.innerHTML = "<h2>Resumen de Donaciones</h2>";
+
+    if (window.listaAportaciones.length === 0) {
+        zona.innerHTML += "<p>No hay donaciones registradas.</p>";
+        return;
+    }
+
+    const ul = document.createElement("ul");
+    window.listaAportaciones.forEach(d => {
+        const li = document.createElement("li");
+        const veces = d.numDonaciones > 1 ? "veces" : "vez";
+        li.innerHTML = `<strong>${d.organizacion}</strong>: ${d.numDonaciones} ${veces} — ${d.cantidad.toFixed(2)} €`;
+        li.style.color = d.organizacion === window.ultimaDonacion ? "green" : "black";
+        ul.appendChild(li);
+    });
+
+    zona.appendChild(ul);
+    zona.scrollTop = zona.scrollHeight;
+};
