@@ -1,66 +1,74 @@
 {
-  "organizaciones": [
-    {
-      "id": "1",
-      "nombre": "Cruz Roja",
-      "acogida": false,
-      "rangoEdad": "infancia"
-    },
-    {
-      "id": "2",
-      "nombre": "Médicos Sin Fronteras",
-      "multiraza": true,
-      "ambito": "internacional"
-    },
-    {
-      "id": "3",
-      "nombre": "UNICEF",
-      "acogida": false,
-      "rangoEdad": "infancia"
-    },
-    {
-      "id": "4",
-      "nombre": "Save the Children",
-      "acogida": true,
-      "rangoEdad": "infancia"
-    },
-    {
-      "id": "5",
-      "nombre": "ACNUR",
-      "acogida": false,
-      "rangoEdad": "infancia"
-    },
-    {
-      "id": "6",
-      "nombre": "Amnistía Internacional",
-      "multiraza": true,
-      "ambito": "internacional"
-    },
-    {
-      "id": "7",
-      "nombre": "Cáritas",
-      "acogida": true,
-      "rangoEdad": "tercera edad"
-    },
-    {
-      "id": "8",
-      "nombre": "WWF",
-      "multiraza": true,
-      "ambito": "internacional"
-    },
-    {
-      "id": "9",
-      "nombre": "Fundación Vicente Ferrer",
-      "acogida": false,
-      "rangoEdad": "infancia"
-    },
-    {
-      "id": "10",
-      "nombre": "Oxfam Intermón",
-      "multiraza": true,
-      "ambito": "internacional"
-    }
-  ],
-  "tramiteDonacion": [
-  ]
+    "organizaciones": [{
+            "id": "1",
+            "nombre": "Cruz Roja",
+            "acogida": false,
+            "rangoEdad": "infancia",
+            "imagen": "../img/Cruz Roja.png"
+        },
+        {
+            "id": "2",
+            "nombre": "Médicos Sin Fronteras",
+            "multiraza": true,
+            "ambito": "internacional",
+            "imagen": "../img/Médicos Sin Fronteras.png"
+        },
+        {
+            "id": "3",
+            "nombre": "UNICEF",
+            "acogida": false,
+            "rangoEdad": "infancia",
+            "imagen": "../img/UNICEF.png"
+        },
+        {
+            "id": "4",
+            "nombre": "Save the Children",
+            "acogida": true,
+            "rangoEdad": "infancia",
+            "imagen": "../img/Save the Children.png"
+        },
+        {
+            "id": "5",
+            "nombre": "ACNUR",
+            "acogida": false,
+            "rangoEdad": "infancia",
+            "imagen": "../img/ACNUR.png"
+        },
+        {
+            "id": "6",
+            "nombre": "Amnistía Internacional",
+            "multiraza": true,
+            "ambito": "internacional",
+            "imagen": "../img/Amnistía Internacional.jpg"
+        },
+        {
+            "id": "7",
+            "nombre": "Cáritas",
+            "acogida": true,
+            "rangoEdad": "tercera edad",
+            "imagen": "../img/Cáritas.png"
+        },
+        {
+            "id": "8",
+            "nombre": "WWF",
+            "multiraza": true,
+            "ambito": "internacional",
+            "imagen": "../img/WWF.jpg"
+        },
+        {
+            "id": "9",
+            "nombre": "Fundación Vicente Ferrer",
+            "acogida": false,
+            "rangoEdad": "infancia",
+            "imagen": "../img/Fundación Vicente Ferrer.png"
+        },
+        {
+            "id": "10",
+            "nombre": "Oxfam Intermón",
+            "multiraza": true,
+            "ambito": "internacional",
+            "imagen": "../img/Oxfam Intermón.jpg"
+        }
+    ],
+    "tramiteDonacion": []
 }

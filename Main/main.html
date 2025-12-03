@@ -8,107 +8,62 @@
 </head>
 
 <body>
-    <div id="contenedorGeneral">
-        <div id="zonaPrincipal">
+
+    <div id="contenedorPrincipal">
+
+        <div id="zonaIzquierda">
             <h1>GestorDeDonaciones</h1>
-            <table>
-                <tr>
-                    <td>
-                        <img src="../img/Cruz Roja.png" alt="Cruz Roja">
-
-                        <div>Cruz Roja</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Cruz Roja" id="1">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/Médicos Sin Fronteras.png" alt="Médicos Sin Fronteras">
-                        <div>Médicos Sin Fronteras</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Médicos Sin Fronteras" id="2">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/UNICEF.png" alt="UNICEF">
-                        <div>UNICEF</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="UNICEF" id="3">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/Save the Children.png" alt="Save the Children">
-                        <div>Save the Children</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Save the Children" id="4">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/ACNUR.png" alt="ACNUR">
-                        <div>ACNUR</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="ACNUR" id="5">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="../img/Amnistía Internacional.jpg" alt="Amnistía Internacional">
-                        <div>Amnistía Internacional</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Amnistía Internacional" id="6">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/Cáritas.png" alt="Cáritas">
-                        <div>Cáritas</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Cáritas" id="7">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/WWF.jpg" alt="WWF">
-                        <div>WWF</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="WWF" id="8">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/Fundación Vicente Ferrer.png" alt="Fundación Vicente Ferrer">
-                        <div>Fundación Vicente Ferrer</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Fundación Vicente Ferrer" id="9">
-                        </div>
-                    </td>
-                    <td>
-                        <img src="../img/Oxfam Intermón.jpg" alt="Oxfam Intermón">
-                        <div>Oxfam Intermón</div>
-                        <div>
-                            <input type="number" min="0" step="0.01" placeholder="€" class="donacionInput" data-org="Oxfam Intermón" id="10">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-
-            <div id="finalizarSeccion">
-                <h2>Resumen final de donaciones</h2>
-            </div>
-            <button id="btnMostrar">Mostrar resumen</button>
-            <br>
-
-            <div id="outputTexto">
-            </div>
-
-            <script src="../js/Boton.js"></script>
-            <script src="../js/ContadorDonaciones.js"></script>
-            <script src="../js/Donaciones.js"></script>
-            <script src="../js/MostrarResumen.js"></script>
+            <div id="zonaPrincipal"></div>
         </div>
 
         <div id="zonaDerecha">
             <h2>Resumen de Donaciones</h2>
-
+            <div id="listaResumen"></div>
         </div>
     </div>
+
+
+    <div id="formularioDonacion">
+        <h2>Datos del Donante</h2>
+        <form id="donacionForm" novalidate>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required minlength="4" maxlength="15">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+
+            <label>Método de Pago:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="metodoPago" value="tarjeta" required> Tarjeta</label>
+                <label><input type="radio" name="metodoPago" value="transferencia"> Transferencia</label>
+            </div>
+
+            <label>¿Es socio?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="esSocio" value="si"> Sí</label>
+                <label><input type="radio" name="esSocio" value="no" checked> No</label>
+            </div>
+
+            <div id="campoSocio" style="display:none;">
+                <label for="codigoSocio">Código de Socio:</label>
+                <input type="text" id="codigoSocio" pattern="[A-Za-z]{3}[0-9]{4}[/_.#&]" title="3 letras + 4 números + un símbolo (/_.#&)">
+            </div>
+
+            <div id="botonesForm">
+                <button type="submit" id="btnRealizar">Realizar donación</button>
+                <button type="button" id="btnLimpiar">Limpiar formulario</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/General.js"></script>
 </body>
 
 </html>
