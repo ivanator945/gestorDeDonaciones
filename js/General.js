@@ -64,3 +64,36 @@ document.addEventListener("DOMContentLoaded", async() => {
 
     configurarFormulario();
 });
+
+function activarEventosDonacion() {
+    document.querySelectorAll("img[alt]").forEach(img => {
+        img.addEventListener("click", () => {
+            const nombre = img.alt;
+            const input = document.querySelector(`.donacionInput[data-org="${nombre}"]`);
+            const cantidad = parseFloat(input.value) || 0;
+
+            if (cantidad <= 0) {
+                alert("Introduce una cantidad válida mayor que 0");
+                return;
+            }
+
+            window.ultimaDonacion = nombre;
+
+            const existente = window.listaAportaciones.find(d => d.organizacion === nombre);
+            if (existente) {
+                existente.cantidad += cantidad;
+                existente.numDonaciones++;
+            } else {
+                window.listaAportaciones.push({
+                    id: parseInt(input.id),
+                    organizacion: nombre,
+                    cantidad: cantidad,
+                    numDonaciones: 1
+                });
+            }
+
+            input.value = "";
+            actualizarResumen();
+        });
+    });
+}
