@@ -118,3 +118,97 @@ window.actualizarResumen = function() {
     zona.appendChild(ul);
     zona.scrollTop = zona.scrollHeight;
 };
+window.enviarDonacionesAlServidor = function() {
+    if (window.listaAportaciones.length === 0) return;
+
+    const donacionesResumen = window.listaAportaciones.map(d => ({
+        id: d.id,
+        organizacion: d.organizacion,
+        importeTotal: parseFloat(d.cantidad.toFixed(2)),
+        numDonaciones: d.numDonaciones,
+        cantidad: parseFloat((d.cantidad / d.numDonaciones).toFixed(2)),
+        fecha: new Date().toISOString().split("T")[0],
+        hora: new Date().toLocaleTimeString("es-ES", { hour12: false })
+    }));
+
+    const tramite = {
+        id: Date.now(),
+        fecha: new Date().toISOString().split("T")[0],
+        donaciones: donacionesResumen
+    };
+
+    fetch("http://localhost:3000/tramiteDonacion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tramiteDonacion: [tramite] })
+    }).catch(() => {});
+};
+
+function configurarFormulario() {
+    const form = document.getElementById("donacionForm");
+
+    document.querySelectorAll('input[name="esSocio"]').forEach(radio => {
+        radio.addEventListener("change", () => {
+            const campo = document.getElementById("campoSocio");
+            const inputCodigo = document.getElementById("codigoSocio");
+            if (radio.value === "si") {
+                campo.style.display = "block";
+                inputCodigo.setAttribute("required", "required");
+            } else {
+                campo.style.display = "none";
+                inputCodigo.removeAttribute("required");
+                inputCodigo.value = "";
+            }
+        });
+    });
+
+    document.getElementById("btnLimpiar").addEventListener("click", () => {
+        form.reset();
+        document.getElementById("campoSocio").style.display = "none";
+        document.getElementById("codigoSocio").removeAttribute("required");
+        limpiarLabels();
+    });
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        limpiarLabels();
+
+        const errores = [];
+
+        if (!form.checkValidity()) {
+            form.querySelectorAll("input").forEach(input => {
+                if (!input.validity.valid) {
+                    const label = document.querySelector(`label[for="${input.id}"]`);
+                    if (label) label.style.color = "red";
+
+                    if (input.validity.valueMissing) {
+                        const nombreCampo = label ? .textContent.replace(":", "") || input.name;
+                        errores.push(`• ${nombreCampo} es obligatorio`);
+                    }
+                    if (input.validity.tooShort || input.validity.tooLong) {
+                        errores.push("• El nombre debe tener entre 4 y 15 caracteres");
+                    }
+                    if (input.validity.typeMismatch && input.type === "email") {
+                        errores.push("• Formato de correo electrónico incorrecto");
+                    }
+                    if (input.validity.patternMismatch && input.id === "codigoSocio") {
+                        errores.push("• Código de socio: 3 letras + 4 números + símbolo final (ej: Abc1234#)");
+                    }
+                }
+            });
+
+            if (!document.querySelector('input[name="metodoPago"]:checked')) {
+                errores.push("• Debes seleccionar un método de pago");
+            }
+
+            alert("ERRORES EN EL FORMULARIO:\n\n" + errores.join("\n"));
+            return;
+        }
+
+        abrirVentanaEmergente();
+    });
+}
+
+function limpiarLabels() {
+    document.querySelectorAll("label").forEach(l => l.style.color = "black");
+}
