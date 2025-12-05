@@ -1,147 +1,163 @@
-button {
-    padding: 12px 28px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.08em;
-    cursor: pointer;
-    transition: transform 0.15s ease;
-}
-
-button:hover {
-    transform: scale(0.95);
-}
-
 body {
+    font-family: Arial, sans-serif;
     background: #dbeafe;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    font-family: Arial, sans-serif;
 }
 
-table {
-    margin-bottom: 32px;
-    width: 90vw;
-    max-width: 800px;
+#contenedorPrincipal {
+    display: flex;
+    width: 90%;
+    max-width: 1400px;
+    margin: 20px 0;
+    gap: 20px;
+    flex: 1;
+}
+
+#zonaIzquierda {
+    flex: 1;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
 
-td {
-    border: none;
-    border-bottom: 1px solid #e0e6ed;
-    text-align: center;
-    padding: 16px;
-    width: 20%;
-    background: linear-gradient(90deg, #f8fafc 0%, #e9f0fb 100%);
-    color: #34495e;
+#zonaDerecha {
+    width: 350px;
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-img {
+#zonaPrincipal table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#zonaPrincipal td {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+#zonaPrincipal img {
     max-width: 80px;
     max-height: 80px;
-    display: block;
-    margin: 0 auto 12px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#zonaPrincipal img:hover {
+    transform: scale(1.1);
 }
 
 .donacionInput {
-    width: 70%;
+    width: 70px;
     padding: 6px;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    border: 1px solid #cbd5e1;
     text-align: center;
-    font-size: 0.95em;
-}
-
-#outputTexto {
-    margin-top: 24px;
-    border: none;
-    padding: 16px;
-    width: 80vw;
-    max-width: 900px;
-    background: rgba(255, 255, 255, 0.97);
-    border-radius: 10px;
-    color: #2d3e50;
-    box-sizing: border-box;
-    white-space: pre-line;
-}
-
-#contenedorGeneral {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100vh;
-}
-
-#zonaPrincipal {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#zonaDerecha {
-    width: 25%;
-    background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 100%);
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
 }
 
 #zonaDerecha h2 {
-    margin-top: 0;
+    margin-bottom: 15px;
     color: #1f2937;
 }
 
-#zonaDerecha div {
-    width: 90%;
-    padding: 6px 8px;
-    margin-bottom: 4px;
-    border-radius: 6px;
-    background-color: #f8fafc;
-    text-align: center;
-    box-sizing: border-box;
+#listaResumen ul {
+    list-style: none;
+    width: 100%;
 }
 
-@media (max-width: 800px) {
-    #contenedorGeneral {
+#listaResumen li {
+    padding: 8px;
+    background: #f8fafc;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#formularioDonacion {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0 40px 0;
+}
+
+#donacionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#donacionForm label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#donacionForm input[type="text"],
+#donacionForm input[type="email"] {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+#botonesForm {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#btnRealizar {
+    background: #3b82f6;
+    color: white;
+}
+
+#btnLimpiar {
+    background: #ef4444;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1000px) {
+    #contenedorPrincipal {
         flex-direction: column;
     }
-
     #zonaDerecha {
         width: 100%;
-        border-left: none;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: none;
+        max-height: 300px;
     }
-}
-
-
-#botones {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-#btnMostrar {
-    background-color: #3b82f6;
-    color: white;
-}
-
-#btnFinalizar {
-    background-color: #10b981;
-    color: white;
 }
