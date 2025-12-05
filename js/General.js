@@ -148,28 +148,31 @@ window.enviarDonacionesAlServidor = function() {
 
 function configurarFormulario() {
     const form = document.getElementById("donacionForm");
+    const campoSocio = document.getElementById("campoSocio");
+    const inputCodigoSocio = document.getElementById("codigoSocio");
+
 
     document.querySelectorAll('input[name="esSocio"]').forEach(radio => {
         radio.addEventListener("change", () => {
-            const campo = document.getElementById("campoSocio");
-            const inputCodigo = document.getElementById("codigoSocio");
             if (radio.value === "si") {
-                campo.style.display = "block";
-                inputCodigo.setAttribute("required", "required");
+                campoSocio.style.display = "block";
+                inputCodigoSocio.required = true;
             } else {
-                campo.style.display = "none";
-                inputCodigo.removeAttribute("required");
-                inputCodigo.value = "";
+                campoSocio.style.display = "none";
+                inputCodigoSocio.required = false;
+                inputCodigoSocio.value = "";
             }
         });
     });
 
+
     document.getElementById("btnLimpiar").addEventListener("click", () => {
         form.reset();
-        document.getElementById("campoSocio").style.display = "none";
-        document.getElementById("codigoSocio").removeAttribute("required");
+        campoSocio.style.display = "none";
+        inputCodigoSocio.required = false;
         limpiarLabels();
     });
+
 
     form.addEventListener("submit", function(e) {
         e.preventDefault();
@@ -177,35 +180,44 @@ function configurarFormulario() {
 
         const errores = [];
 
-        if (!form.checkValidity()) {
-            form.querySelectorAll("input").forEach(input => {
-                if (!input.validity.valid) {
-                    const label = document.querySelector(`label[for="${input.id}"]`);
-                    if (label) label.style.color = "red";
 
-                    if (input.validity.valueMissing) {
-                        const nombreCampo = label ? .textContent.replace(":", "") || input.name;
-                        errores.push(`• ${nombreCampo} es obligatorio`);
-                    }
-                    if (input.validity.tooShort || input.validity.tooLong) {
-                        errores.push("• El nombre debe tener entre 4 y 15 caracteres");
-                    }
-                    if (input.validity.typeMismatch && input.type === "email") {
-                        errores.push("• Formato de correo electrónico incorrecto");
-                    }
-                    if (input.validity.patternMismatch && input.id === "codigoSocio") {
-                        errores.push("• Código de socio: 3 letras + 4 números + símbolo final (ej: Abc1234#)");
-                    }
+        form.querySelectorAll("input").forEach(input => {
+            if (!input.validity.valid) {
+
+                const label = document.querySelector(`label[for="${input.id}"]`);
+                const nombreCampo = label ? label.textContent.replace(":", "") : input.name;
+
+                if (label) label.style.color = "red";
+
+                if (input.validity.valueMissing) {
+                    errores.push("• " + nombreCampo + " es obligatorio");
                 }
-            });
 
-            if (!document.querySelector('input[name="metodoPago"]:checked')) {
-                errores.push("• Debes seleccionar un método de pago");
+                if (input.validity.tooShort || input.validity.tooLong) {
+                    errores.push("• El nombre debe tener entre 4 y 15 caracteres");
+                }
+
+                if (input.validity.typeMismatch && input.type === "email") {
+                    errores.push("• Formato de correo electrónico incorrecto");
+                }
+
+                if (input.validity.patternMismatch && input.id === "codigoSocio") {
+                    errores.push("• Código de socio: 3 letras + 4 números + símbolo final (ej: Abc1234#)");
+                }
             }
+        });
 
+
+        if (!document.querySelector('input[name="metodoPago"]:checked')) {
+            errores.push("• Debes seleccionar un método de pago");
+        }
+
+
+        if (errores.length > 0) {
             alert("ERRORES EN EL FORMULARIO:\n\n" + errores.join("\n"));
             return;
         }
+
 
         abrirVentanaEmergente();
     });
