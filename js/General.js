@@ -97,6 +97,7 @@ function activarEventosDonacion() {
         });
     });
 }
+
 window.actualizarResumen = function() {
     const zona = document.getElementById("zonaDerecha");
     zona.innerHTML = "<h2>Resumen de Donaciones</h2>";
@@ -118,6 +119,7 @@ window.actualizarResumen = function() {
     zona.appendChild(ul);
     zona.scrollTop = zona.scrollHeight;
 };
+
 window.enviarDonacionesAlServidor = function() {
     if (window.listaAportaciones.length === 0) return;
 
@@ -212,3 +214,88 @@ function configurarFormulario() {
 function limpiarLabels() {
     document.querySelectorAll("label").forEach(l => l.style.color = "black");
 }
+
+function abrirVentanaEmergente() {
+    const popup = window.open("", "resumenDonacion", "width=500,height=350,toolbar=no,location=no,scrollbars=yes,resizable=yes");
+    const doc = popup.document;
+    doc.open();
+    doc.write("<!DOCTYPE html><html><head><meta charset='utf-8'><title>Resumen de Donación</title></head><body></body></html>");
+    doc.close();
+
+    const style = doc.createElement("style");
+    style.textContent = `
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f0f9ff; color: #1e293b; }
+        h2 { color: #1e40af; text-align: center; margin-bottom: 20px; }
+        p { margin: 10px 0; font-size: 1.1em; }
+        ul { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        li { margin: 8px 0; padding: 8px; background: #ecfdf5; border-radius: 6px; }
+        .botones { text-align: center; margin-top: 25px; }
+        button { padding: 12px 28px; margin: 0 10px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; transition: 0.2s; }
+        #volver { background: #ef4444; color: white; }
+        #terminar { background: #10b981; color: white; }
+        button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+    `;
+    doc.head.appendChild(style);
+
+    const body = doc.body;
+
+    const titulo = doc.createElement("h2");
+    titulo.textContent = "Resumen Final del Trámite";
+    body.appendChild(titulo);
+
+    const fecha = doc.createElement("p");
+    fecha.innerHTML = `<strong>Fecha:</strong> ${new Date().toLocaleString()}`;
+    body.appendChild(fecha);
+
+    const totalDonado = window.listaAportaciones.reduce((sum, d) => sum + d.cantidad, 0).toFixed(2);
+    const totalP = doc.createElement("p");
+    totalP.innerHTML = `<strong>Total donado:</strong> ${totalDonado} €`;
+    body.appendChild(totalP);
+
+    const listaTitulo = doc.createElement("p");
+    listaTitulo.innerHTML = "<strong>Donaciones realizadas:</strong>";
+    body.appendChild(listaTitulo);
+
+    const ul = doc.createElement("ul");
+    window.listaAportaciones.forEach(d => {
+        const li = doc.createElement("li");
+        const veces = d.numDonaciones > 1 ? "veces" : "vez";
+        li.innerHTML = `<strong>${d.organizacion}</strong>: ${d.cantidad.toFixed(2)}€ (${d.numDonaciones} ${veces})`;
+        ul.appendChild(li);
+    });
+    body.appendChild(ul);
+
+    const divBotones = doc.createElement("div");
+    divBotones.className = "botones";
+
+    const btnVolver = doc.createElement("button");
+    btnVolver.id = "volver";
+    btnVolver.textContent = "Volver";
+    btnVolver.onclick = () => popup.close();
+
+    const btnTerminar = doc.createElement("button");
+    btnTerminar.id = "terminar";
+    btnTerminar.textContent = "Terminar Pedido";
+    btnTerminar.onclick = () => {
+        window.finalizarPedido();
+        popup.close();
+    };
+
+    divBotones.appendChild(btnVolver);
+    divBotones.appendChild(btnTerminar);
+    body.appendChild(divBotones);
+}
+
+window.finalizarPedido = function() {
+    enviarDonacionesAlServidor();
+
+    window.listaAportaciones = [];
+    window.ultimaDonacion = null;
+    actualizarResumen();
+
+    document.getElementById("donacionForm").reset();
+    document.getElementById("campoSocio").style.display = "none";
+    document.getElementById("codigoSocio").removeAttribute("required");
+
+    alert("Donación realizada correctamente. ¡Gracias por tu solidaridad!");
+};
